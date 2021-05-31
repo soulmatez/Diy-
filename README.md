@@ -30,9 +30,3 @@ npm run build
 - 页面回显查询数据库然后转回数组回显到页面上
 - 前端显示同样查询数据库将JSON转换为数组然后新建与项目样式相同的模块循环渲染在一个页面上。
 - 主要弄明白每个模块里面字段的作用，在module.js里面都有备注说明
-
-![Image text](https://img-blog.csdnimg.cn/20201104111620483.gif)
-
-项目预览地址：[http://diy.hsycms.com/](http://diy.hsycms.com/)
-
-项目交流群：942832552
