@@ -1,0 +1,67 @@
+$color:#29c8a1;
+.xcx-module-attr{ width:400px; position: fixed; right:0; top:0; height:100%; overflow:hidden auto; background:#fff; box-shadow: #ddd 0 0 10px; z-index:21;
+	 	.module-attr-tab{ margin-top:65px; border-top:1px solid #eee; display: flex; border-bottom:1px solid #f1f1f1;
+			  li{ flex:1; padding:12px 0; cursor: pointer; border-right:1px solid #f1f1f1; text-align: center; font-size:14px; color:#333; position: relative;
+					  &.on{ color:$color}
+							&.on:after{ width:56px; height:2px; background:$color; content:''; position: absolute; bottom:0; left:0; right:0; margin:auto;}
+					}
+			}
+		
+			.attr-con-item{ padding:12px; font-weight: bold; border-bottom:1px solid #eee; font-size:14px;}
+			.att-con-box{ font-size:13px; color:#555; 
+			/***导航***/
+			.attr-nav-item{
+				 .ht{ height:40px; padding:0 12px; overflow: hidden; display: flex;  border-bottom:1px solid #eee; justify-content: space-between; align-items: center;
+					  .t{ font-size:14px; flex:1; cursor: pointer; height:40px; line-height:40px; &.on{ span{ transform: rotate(-180deg); } } }
+							.opt{ 
+										.el-button.is-circle{padding:5px; transform: scale(0.8); font-size:12px; margin-left:0;}
+										.el-button--primary{background-color:$color; border-color:$color;}
+							 }
+					}
+					.hm{ padding:12px; padding-top:15px; padding-bottom:0; border-bottom:1px solid #eee;}
+					.goods{ display: flex; background:#f1f1f1; margin-bottom:12px; margin-top:-5px;
+						  img{ width:80px; height:80px; margin-right:12px;}
+								.text{ height:80px; overflow: hidden;
+								  .p1{color:#333;}
+								  p{ padding-top:5px; white-space: nowrap; text-overflow: ellipsis; color:#999;}
+								}
+					}
+			}
+			.attr-nav-add{ height:40px; display: flex; cursor:pointer; &:hover{ color:$color;} border-bottom:1px solid #eee; justify-content:center; align-items: center; span{ margin:2px 5px 0 0; font-size:15px;} }
+			.att-con-pd{ padding:20px;}
+			.item{ margin-bottom:20px; display: flex; &.c{ align-items: center;}	
+			  .tit.mg{margin-top:-4px;}
+					.input{ flex:1; &.flex{ display: flex; align-items: center;}					  
+							.intxt{ padding:6px 10px; color:#555; border:1px solid #eee; border-radius:2px; width:180px; margin-right:20px;}
+							.colorBtn{ width:16px; height:16px; border-radius:50%; border:1px solid #ddd; cursor: pointer; }
+							.module-upload{ border:1px dashed #eee; overflow: hidden; margin-right:12px; cursor:pointer; position:relative; display: flex; align-items: center; justify-content: center; width:60px; height:60px; background:#f7f8fa; border-radius:2px;
+							  &.c{ width:150px; height:100px; }
+									.el-icon-camera-solid{ font-size:25px; color:#bfbfbf; opacity:0.8;}
+									.el-icon-close{ width:15px; height:14px; font-size:12px; line-height:14px; text-align:center; background-color: rgba(0, 0, 0, 0.7); border-radius: 0 0 0 12px; position:absolute; right:0; top:0; color:#fff; z-index:1;}
+									img{ display:block; width:100%; object-fit:cover; height:100%;}
+							}
+							.tips{color:#bfbfbf;}
+							.el-textarea__inner{ font-family: Avenir, Helvetica, Arial, sans-serif;}			
+							.input-line{ &:last-child{margin-bottom:0;}  margin-bottom:15px; display: flex; align-items: center; .sp1{ display: flex; min-width:70px; align-items: center; margin-right:20px;} 
+									.tit{ margin-top:-4px;}									
+									.el-input{ width:180px; }
+									.el-input__inner{ height:29px; line-height:29px; }
+									.el-input__icon{ line-height:29px;}
+									.input.f{ display: flex; align-items: center; 
+									  .font{ margin-left:12px; width:16px;border-radius:50%; height:16px; cursor:pointer; &:hover,&.on{ color:$color;} }
+									}												
+									.el-button{ padding:0 5px; height:29px; line-height:29px; margin-top:5px; margin-right:5px;}
+							}
+					}
+					.attr-style{ display: flex; flex-wrap: wrap;}
+					.style{ width:120px; margin-right:12px; margin-bottom:12px; cursor: pointer;
+					  img{ width:100%; display: block; margin-bottom:5px;}
+							dd{ font-size:12px; text-align: center;
+								 .el-radio__input.is-checked .el-radio__inner{ background:$color; border-color: $color;}
+								 .el-radio__input.is-checked+.el-radio__label{ color:$color;}
+							}
+					}
+			}
+	 }
+}
+

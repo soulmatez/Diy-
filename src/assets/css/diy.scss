@@ -1,0 +1,159 @@
+$color:#29c8a1;
+.xcx-module-container{ 
+	width:375px; height:667px; display: flex; flex-direction: column; top:100px; left:530px; position:absolute; background:#fff; box-shadow:#eee 0 0 12px; border-radius:5px;
+	/***页面标题***/
+	.xcx-title{ height:50px; position: relative; background:#fff; text-align:center; 
+			img{position: absolute; z-index:1; right:12px; top:50%; transform: translateY(-50%); width:72px; height:30px; background:rgba(0,0,0,0.2); border-radius:30px; } 
+			.tit{ font-size:15px; line-height:50px; margin:0; padding:0;position: relative; z-index:1; }
+			.el-icon-arrow-left{ position: absolute; left:0; top:0; z-index:1; width:40px; height:100%; color:#888; cursor: pointer; font-size:20px; display: flex; justify-content: center; align-items: center;}
+	}
+	/**模块大框架***/	
+	.xcx-module{ flex:1; background:#f5f5f5; position: relative; height:100%; overflow-y:auto;}
+	.xcx-module::-webkit-scrollbar{ width:0;}
+	/**无模块***/
+	.xcx-nomodule{ width:100%; height:100%; display: flex; justify-content: center; align-items: center; 
+			h2{ font-size:15px;}
+	}
+	/***模块项***/
+	.xcx-module-item{ position: relative;
+			.xline{  z-index:2; position: absolute; display: none;
+			  &:nth-child(1){ left:0; border-left:1px dashed $color; top:0; height:100%;}
+				&:nth-child(2){ left:0; border-top:1px dashed $color; top:0; width:100%;}
+				&:nth-child(3){ right:0; border-right:1px dashed $color; top:0; height:100%;}
+				&:nth-child(4){ left:0; border-bottom:1px dashed $color; bottom:0; width:100%;}
+			}	
+		  &.on { .xline{ display: block;} }	
+	}		
+		/**空白提示***/
+		.placeholder{ height:80px; margin:10px 0; display: flex; justify-content: center; background:#eee; color:#eee; align-items: center; border:1px dashed #eee;
+				&.on{ color:$color; border-color:$color; background:#e4fff1; }
+		}
+		/***右侧操作按钮***/
+		.xcx-module-option{ position: absolute; top:0; right:-25px; width:25px; background:rgba(0,0,0,0.6); z-index:20;
+				li{ cursor: pointer;	span{ height:25px; transform: scale(1); display: block; font-size:12px; display: flex; justify-content: center; align-items:center; color:#fff;}
+					&:hover{background:$color;}
+				}
+		}	
+		/***模块标题***/
+		.module-item-title{ background:#fff; position: relative; z-index: 1; font-size:14px; padding:14px 12px; border-bottom:1px solid #eee; display: flex; justify-content: space-between; align-items: center;
+		  .mo{ color:#666;}
+		}
+		/***标题模块2***/
+		.module-item-twtit{ font-size:14px; position: relative; z-index: 1; padding:0 12px; padding-top:10px;}
+		/***导航模块***/
+		.module-common{ margin-top:10px; position: relative; .mg0{ margin-top:0;} }
+		.module-background{  background:#fff; position: absolute; left:0; top:0; right:0; bottom:0;  }
+		.module-item-nav{
+			 .item-nav-con{ position: relative; z-index:1; padding:0 5px; padding-bottom:10px; display: flex; flex-wrap: wrap;
+				  &.col5 { .item{ width:20%; } }
+				  .item{ padding-top:12px; width:25%; text-align: center;
+						  .item-nav-img{ width:55px; height:55px; margin:0 auto;}
+								.item-nav-text{ font-size:12px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color:#333; padding-top:5px; }
+						}
+				}
+		}
+		
+		/***多功能模块***/
+		.module-item-duo{ margin-top:10px; position: relative; .mg0{ margin-top:0;}
+			  .item-duo-con{ position: relative; overflow: hidden;}			
+					.item-duo-style1{ position: relative; display:flex; flex-wrap: wrap; z-index: 1; padding-right:10px; padding-top:10px; overflow: hidden;
+					   &.col1{ .item{ width:100%; } }
+								&.col2{ .item{ width:50%; } }
+								&.col3{ .item{ width:33.333333%; } }
+								&.col4{ .item{ width:25%; } }
+					   .item{ width:33.3333333%; padding-left:10px; padding-bottom:10px; 
+										.c{ overflow:hidden; img{ object-fit: cover; display:block; width:100%;} .txt{ white-space: nowrap; padding:5px 10px; text-align:center; overflow: hidden; text-overflow: ellipsis;} }
+								}
+					}
+					.item-duo-style2{ position: relative; z-index: 1;  padding:10px 0;  overflow: hidden;					 
+								.item{
+									 img { display:block; width:60px; margin:0 auto; height:60px; border-radius:50%; object-fit: cover;}
+									.txt{ white-space: nowrap; padding:5px 10px; text-align:center; overflow: hidden; text-overflow: ellipsis;}
+								}
+					}
+					.item-duo-style3{ position: relative; z-index: 1;  padding:10px;
+					   .item{
+								 .swiper-slide{ width:300px;
+									 .pic{ height:100px; img { display:block; width:100%; height:100%; object-fit: cover;}}
+									.txt{ white-space: nowrap; padding:5px 0px; overflow: hidden; text-overflow: ellipsis;}
+									}
+							}
+					}
+					.item-duo-style4{ position: relative; z-index: 1;  padding:10px;
+					   .item{ height:150px;								  
+									.pic{ height:150px; img { display:block; width:100%; height:100%; object-fit: cover;}}
+									.txt{ position: absolute; left:0; bottom:0; z-index: 1; white-space: nowrap; padding:10px; overflow: hidden; text-overflow: ellipsis;}
+							}
+					}
+			}			
+			/***图文模块***/
+			.module-item-tuwen{ margin-top:10px; position: relative; .mg0{ margin-top:0;}
+				  .item-tuwen-con{ position: relative; overflow: hidden;}
+						.item-tuwen-style1{ position: relative; z-index: 1;  padding:10px 0;  overflow: hidden;	
+									.tit{ white-space: nowrap; font-size:14px; padding:10px; padding-top:0; text-align:center; overflow: hidden; text-overflow: ellipsis;}		
+									.item{ margin:0 10px; position: relative; overflow: hidden;
+											img{ object-fit: cover; display:block; height:150px; width:100%;} 										
+										.note{ line-height:18px; color:#fff; background:rgba(0,0,0,0.5); position: absolute; bottom:0; padding:6px 10px; width:100%;}
+									}
+						}
+						.item-tuwen-style2{ position: relative; display:flex; flex-wrap: wrap; z-index: 1; padding-bottom:10px;  overflow: hidden;
+									.item{ padding:0 10px; padding-top:10px; 
+											img{ object-fit: cover; display:block; height:150px; width:100%;} 
+											.tit{ white-space: nowrap; font-size:14px; padding-top:10px; text-align:center; overflow: hidden; text-overflow: ellipsis;}
+											.note{ line-height:20px; color:#999; padding-top:10px;}
+									}
+						}
+				}
+				/***商品模块***/
+		  .module-item-goods{margin-top:10px; position: relative; .mg0{ margin-top:0;}
+				.item-goods-con{ position: relative; overflow: hidden;}	
+					.noadd{ height:200px; display: flex; align-items: center; justify-content: center; width:100%;}
+					.item-goods-style1{ position: relative; z-index: 1; display: flex; flex-wrap: wrap; justify-content: space-between; padding:10px; padding-top:0;  overflow: hidden;
+								&.style2{ .item{ width: calc(100%/2 - 5px); 
+											.yh { font-size:10px;} 
+											.price{ span { b { font-size:12px;} i{ font-size:10px;} } } 
+									} 
+								}							
+								.item{ width:100%; margin-top:12px; border-radius:3px; position: relative; overflow: hidden;
+										.pic{ overflow: hidden; position: relative; height:150px; 
+													img{ object-fit: cover; display:block; height:100%; width:100%;} 
+													span{ background:red; color:#fff; padding:2px 5px; border-bottom-right-radius:5px; position: absolute; left:0; top:0;}
+										}
+										.tit{ white-space: nowrap; padding-top:5px; font-size:14px; overflow: hidden; text-overflow: ellipsis;}
+										.yh{ display: flex; overflow: hidden; justify-content: space-between; align-items:center; color:#999; margin-top:5px;
+											span{ padding:2px 5px; background:#F73E44; color:#fff; font-size:12px;}
+												label{flex:1; overflow: hidden; text-align: right;}
+										}	
+										.price{ padding-top:5px; color:#666; display: flex; overflow: hidden; justify-content: space-between; align-items:center;
+											span{ flex:1; overflow: hidden; b{ font-size:14px; color:#F73E44; } i{ color:#bfbfbf; font-style: normal; padding-left:5px; text-decoration: line-through;} }
+												label{ padding:2px 5px; background:#F73E44; color:#fff;}
+										}
+										.ju{ padding-top:5px; color:#999; font-size:11px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis; }
+								}
+					}			
+		}
+		/***推荐模块***/
+		.module-item-tuijian{ margin-top:10px; position: relative; .mg0{ margin-top:0;}
+			  .item-tuijian-con{ position: relative; overflow: hidden;}
+					.item-tuijian-style1{ position: relative; z-index: 1;  padding:10px 0;  overflow: hidden;
+								.item{ margin:0 10px; margin-bottom:10px; position: relative; overflow: hidden;
+									img{ object-fit: cover; display:block; height:150px; width:100%;} 										
+									.note{ line-height:18px; color:#fff; background:rgba(0,0,0,0.5); position: absolute; bottom:0; padding:6px 10px; width:100%;}
+								}
+					}
+		}
+		/***顶部头图模块***/
+	  .xcx-page-topimg{ position: relative; padding:0 12px; overflow: hidden; padding-top:65px; padding-bottom:12px;
+		  .module-background{ &.bg{ z-index:1; height:100px; width:110%; left: -5%; background-color:$color; border-bottom-left-radius:50%; border-bottom-right-radius:50%;} }
+			.pic{ width:68px; position: relative; z-index: 2; border-radius:50%; overflow: hidden; height:68px; border:2px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.5); margin:0 auto; img{ width:100%; height:100%; object-fit: cover;}}
+			.tit{ font-size:14px; position: relative; text-align: center; z-index: 2; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; padding-top:5px;}
+			.note{ color:#999; position: relative; z-index: 2; font-size:12px; line-height:22px; padding-top:5px;}
+		}
+}
+
+
+/**预览***/
+.xcx-preview{position: fixed; left:0; right:0; margin:auto; top:50%; width:375px; margin-top:-333px; z-index:1000;
+		.el-icon-close{ position: absolute; width:25px; height:25px; right:-30px; top:0; cursor: pointer; color:#fff; border:1px solid #fff; border-radius:50%; display: flex; align-items: center; justify-content: center; font-size:16px; cursor: pointer;}
+		.xcx-module-container{ position: static; top:0; left:0; box-shadow:none; border-radius:0;}
+}
